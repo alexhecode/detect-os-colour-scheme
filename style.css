@@ -1,9 +1,13 @@
+/* ! Work on the scroll buttons LAST */
+/* TODO Animate text */
+/* TODO Media query to remove scroll arrows when on mobile */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y mandatory; /* scroll snapping */
 }
 
 /* remove scroll bars */
@@ -23,13 +27,17 @@ section {
     height: 100vh;
     width: 100vw;
     text-decoration: none;  /* This removes the blue hyperlink colour after a link has been clicked */
-    scroll-snap-align: start;
+    scroll-snap-align: start; /* scroll snapping */
 }
 
 p {
     padding: 30px;
     font-size: 20px;
     width: 100%;
+}
+
+.emoji {
+    font-size: 65px;
 }
 
 h1 {
@@ -45,34 +53,55 @@ h3 {
     padding-left: 15px;
 }
 
+/* old code */
+/* #demo {
+    height: 50vh;
+    width: 50vw;
+    scroll-snap-align: start;
+    text-align: center;
+} */
+
+#demo video {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+figcaption {
+    padding: 10px;
+}
+
 /* Scroll Arrows */
-#arrow-down-1 {
+/* .arrow-down {
     position: absolute;
-    bottom:0%;
     width:100%;
     padding-bottom: 20px;
 }
 
-#arrow-up-1 {
+.arrow-up {
     position: absolute;
     top:100%;
     width:100%;
     padding-top: 20px;
 }
 
-#arrow-down-2 {
-    position: absolute;
+/* Arrow down positioning */
+.arrow-down:nth-of-type(1) {
+    bottom: 0%;
+}
+
+.arrow-down:nth-of-type(2) {
     bottom:-100%;
-    width:100%;
-    padding-bottom: 20px;
-}
+} */
 
-.fa-arrow-down {
-    animation: down 2s infinite;
-}
-
+/* Arrow hover effect */
 .fas:hover {
     opacity: 0.5;
+}
+
+/* Arrow animation */
+.fa-arrow-down {
+    animation: down 2s infinite;
 }
 
 @keyframes down {
@@ -80,7 +109,7 @@ h3 {
       transform: translate(0, 0);
     }
     20% {
-      transform: translate(0, 10px);
+      transform: translate(0, -10px);
     }
     40% {
       transform: translate(0, 0);
@@ -96,18 +125,23 @@ h3 {
       transform: translate(0, 0);
     }
     20% {
-      transform: translate(0, -10px);
+      transform: translate(0, 10px);
     }
     40% {
       transform: translate(0, 0);
     }
   }
 
+/* prefers-color-scheme media query */
 /* LIGHT MODE */
 @media (prefers-color-scheme: light) {
     body {
         background-color: #fdfcfa;
         color: #000000;
+    }
+
+    code {
+        color: #21b439;
     }
 
     h1 {
@@ -130,8 +164,12 @@ h3 {
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
     body {
-        background-color:#1A1110;
+        background-color:#000000; /* old colour: #1A1110; */
         color: white;
+    }
+
+    code {
+        color: #ffa801;
     }
 
     h1 {

@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="style.css">
     <title>Detect OS Colour Scheme</title>
 </head>
+
 <body>
-    <section id="landing">
+    <section id="landing" accesskey="1">
         <h1 class="animate__animated animate__slideInUp">Detecting OS Colour Schemes</h1>
         <h3 class="animate__animated animate__slideInUp">with pure CSS</h3>
 
@@ -25,27 +26,81 @@
         </div>
 
         <p>
-           A short guide on how to match website colour schemes with the OS.
+           A <em>short</em> guide on how to match website colour schemes with the OS.
         </p>
 
-        <div id="arrow-down-1">
-            <a href="#step-one"><i class="fas fa-arrow-down fa-2x"></i></a>
+        <div class="arrow-down">
+            <a href="#one"><i class="fas fa-arrow-down fa-2x"></i></a>
         </div>
     </section>
-    <section id="step-one">
-        <div id="arrow-up-1">
+
+    <section id="one" accesskey="2">
+        <div class="arrow-up">
             <a href="#landing"><i class="fas fa-arrow-up fa-2x"></i></a>
         </div>
+        
+        <div class="emoji">
+            <span>&#128064</span>
+        </div>
 
-        <h1>Let's see a demo...</h1>
-        <h3>Insert video here! Playback on Scroll</h3>
+        <h1>First, let's have a look at a demo...</h1>
 
-        <div id="arrow-down-2">
-            <a href="#step-two"><i class="fas fa-arrow-down fa-2x"></i></a>
+        <div class="arrow-down">
+            <a href="#demo"><i class="fas fa-arrow-down fa-2x"></i></a>
         </div>
     </section>
-    <section id="step-two">
-        <h1>How do we achieve this?</h1>
+
+    <!-- VIDEO (autoplay when visible) -->
+    <section id="demo">
+        <div class="arrow-up">
+            <a href="#one"><i class="fas fa-arrow-up fa-2x"></i></a>
+        </div>
+
+        <figure>
+            <video src="Detect OS.mp4" preload="auto" controls></video>
+            <figcaption>A demonstration of what we'll be learning today!</figcaption>
+        </figure>
+
+        <div class="arrow-down">
+            <a href="#two"><i class="fas fa-arrow-down fa-2x"></i></a>
+        </div>
+    </section>
+
+    <section id="two" accesskey="3">
+        <div class="arrow-up">
+            <a href="#demo"><i class="fas fa-arrow-up fa-2x"></i></a>
+        </div>
+
+        <div class="emoji">
+            <span>&#129300</span>
+        </div>
+
+        <h1>So...how do we achieve this?</h1>
+        <h3>Scroll down to find out!</h3>
+
+        <div class="arrow-down">
+            <a href="#three"><i class="fas fa-arrow-down fa-2x"></i></a>
+        </div>
+    </section>
+
+    <section id="three" accesskey="4">
+        <div class="arrow-up">
+            <a href="#two"><i class="fas fa-arrow-up fa-2x"></i></a>
+        </div>
+
+        <div class="emoji">
+            <span>&#128588</span>
+        </div>
+
+        <p>
+            We can thank the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme" target="_blank"><code>prefers-color-scheme</code></a> CSS media query for this feature!
+            This media query is specifically used to detect whether or not the user has
+            chosen a light or dark colour theme in the operating system settings.
+        </p>
+
+        <div class="arrow-down">
+            <a href="#"><i class="fas fa-arrow-down fa-2x"></i></a>
+        </div>
     </section>
 </body>
 </html>
